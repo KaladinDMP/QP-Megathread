@@ -113,17 +113,32 @@ a { color: inherit; text-decoration: none; }
 }
 @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-.brand-logo {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    border-radius: 8px;
-    filter: drop-shadow(0 0 14px rgba(0, 255, 204, 0.35));
-    transition: transform 0.4s ease, filter 0.4s ease;
+/* Hero logo (big, centred, floating above the title) */
+.hero-logo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+    animation: fade-up 1s ease-out;
 }
-.brand:hover .brand-logo {
-    transform: rotate(-6deg) scale(1.05);
-    filter: drop-shadow(0 0 22px rgba(0, 255, 204, 0.55));
+.hero-logo {
+    width: clamp(110px, 18vw, 160px);
+    height: auto;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 0 32px rgba(0, 255, 204, 0.35))
+        drop-shadow(0 12px 40px rgba(0, 0, 0, 0.5));
+    animation: hero-float 6s ease-in-out infinite;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+.hero-logo:hover {
+    transform: scale(1.06) rotate(-2deg);
+    filter:
+        drop-shadow(0 0 48px rgba(0, 255, 204, 0.55))
+        drop-shadow(0 16px 48px rgba(0, 0, 0, 0.55));
+}
+@keyframes hero-float {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-10px); }
 }
 
 .brand-accent { color: #00ffcc; }
