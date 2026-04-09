@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="assets/images/logo.png" alt="QP Megathread logo" width="160">
+<img src="assets/images/logo.png" alt="r/QuestPiracy Community Megathread" width="160">
 
 # r/QuestPiracy Community Megathread
 
 ### The community-driven QuestPiracy resource hub
 
-**Live site →** [**QPMegathread.top**](https://qpmegathread.top)
+**Live site →** [**qpmegathread.top**](https://qpmegathread.top)
 
 </div>
 
@@ -14,7 +14,7 @@
 
 ## Alright, we're doing this properly now.
 
-We just launched a community-driven QP Megathread site and this is where things start getting better.
+We just launched a community-driven r/QuestPiracy Community Megathread site and this is where things start getting better.
 
 ## What this is
 
@@ -142,7 +142,7 @@ QP-Megathread/
 | Path | Who can merge |
 |---|---|
 | `index.html` | Maintainers only |
-| `assets/css/`, `assets/js/`, `assets/data/` | Maintainers only |
+| `assets/css/`, `assets/js/` | Maintainers only |
 | `CNAME`, `.github/` | Maintainers only |
 | **`pages/**`** | **Anyone via PR** |
 | **`assets/images/`** | **Anyone via PR** |
