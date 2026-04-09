@@ -128,8 +128,9 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     gap: 10px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: clamp(0.78rem, 2.2vw, 0.95rem);
     letter-spacing: -0.01em;
+    white-space: nowrap;
 }
 .brand-icon {
     display: inline-flex;
@@ -285,8 +286,17 @@ a { color: inherit; text-decoration: none; }
     background: linear-gradient(135deg, #00ffcc, #00ccff);
     color: #07070c;
     box-shadow: 0 10px 30px -10px rgba(0, 255, 204, 0.5);
+    animation: btn-pulse 3s ease-in-out infinite;
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 44px -10px rgba(0, 255, 204, 0.65); }
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 44px -10px rgba(0, 255, 204, 0.65);
+    animation: none;
+}
+@keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 10px 30px -10px rgba(0, 255, 204, 0.5); }
+    50%      { box-shadow: 0 10px 40px -6px rgba(0, 255, 204, 0.7), 0 0 60px -10px rgba(0, 255, 204, 0.25); }
+}
 .btn-ghost {
     background: rgba(255,255,255,0.04);
     color: #e6e8ef;
@@ -474,8 +484,17 @@ a { color: inherit; text-decoration: none; }
     font-size: 0.88rem;
 }
 .footer-meta { display: flex; gap: 10px; }
-.footer-meta a { color: #00ffcc; }
-.footer-meta a:hover { text-decoration: underline; }
+.footer-meta a {
+    color: #00ffcc;
+    animation: link-glow 2.5s ease-in-out infinite;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+.footer-meta a:hover {
+    text-decoration: underline;
+    animation: none;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.35);
+}
 
 /* ---------- Page template (subpages) ---------- */
 .page-hero {
@@ -580,65 +599,27 @@ a { color: inherit; text-decoration: none; }
     text-align: left;
     animation: fade-up 0.8s ease-out;
     position: relative;
-    padding: 36px 36px 32px;
-    border-radius: 20px;
-    background:
-        linear-gradient(180deg, rgba(0, 136, 204, 0.12), rgba(255,255,255,0.02)),
-        rgba(255,255,255,0.02);
-    border: 1px solid rgba(0, 204, 255, 0.18);
-    backdrop-filter: blur(12px);
     overflow: hidden;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 255, 204, 0.04);
-    animation: fade-up 0.8s ease-out;
 }
-.tg-card::before {
+.content-pill::before {
     content: '';
     position: absolute;
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(0, 204, 255, 0.55), transparent 60%);
+    background: linear-gradient(135deg, rgba(0,255,204,0.35), transparent 50%, rgba(168,85,247,0.25));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
 }
-.tg-card-head {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 18px;
-}
-.tg-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #0088cc, #00ccff);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    box-shadow: 0 0 28px rgba(0, 204, 255, 0.35);
-}
-.tg-card-title {
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: -0.01em;
-}
-.tg-card-sub {
-    font-size: 0.85rem;
-    color: #8a90a4;
-}
-.tg-card-desc {
+.content-pill p {
     color: #b4b9c9;
     font-size: 0.95rem;
-    margin: 0 0 24px;
-}
-.tg-card-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    margin: 0 0 18px;
+    line-height: 1.7;
 }
 
 /* Content inside pills — sections, lists, blockquotes */
@@ -692,12 +673,14 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
     .navbar { padding: 14px 20px; }
+    .brand { font-size: 0.72rem; }
     .nav-links { gap: 18px; }
     .nav-links a:nth-child(1) { display: none; }
     .hero { padding: 80px 20px 60px; }
     .hero-stats { gap: 36px; }
     .section { padding: 60px 20px; }
     .about-card { padding: 32px 24px; }
+    .content-pill { padding: 32px 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
