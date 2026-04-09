@@ -19,10 +19,10 @@
 # ------------------------------------------------------------
 
 # Lock the index and shared code/data assets to maintainers
-/index.html           @KaladinDMP
-/assets/              @KaladinDMP
-/CNAME                @KaladinDMP
-/.github/             @KaladinDMP
+/index.html           @KaladinDMP @Nildyanna
+/assets/              @KaladinDMP @Nildyanna
+/CNAME                @KaladinDMP @Nildyanna
+/.github/             @KaladinDMP @Nildyanna
 
 # --- Community-open exceptions (must come AFTER the broad rules) ---
 
