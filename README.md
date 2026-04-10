@@ -118,7 +118,7 @@ QP-Megathread/
 │   ├── quest-standalone.html
 │   ├── pcvr.html
 │   ├── dev-mode.html
-│   ├── rookies-json.html
+│   ├── public-json.html
 │   ├── tools.html
 │   └── ideas.html
 └── .github/
@@ -132,7 +132,7 @@ QP-Megathread/
 | A Quest standalone source/site/app | `pages/quest-standalone.html` |
 | A PCVR source, store, mod repo | `pages/pcvr.html` |
 | Dev-mode steps, ADB, drivers, prerequisites | `pages/dev-mode.html` |
-| Rookies sideloader JSON / `@the_vrSrc` mirrors | `pages/rookies-json.html` |
+| Public JSON / `@the_vrSrc` mirrors | `pages/public-json.html` |
 | A community-made tool (Standalone / PCVR / General) | `pages/tools.html` |
 | A wishlist item or feature idea | `pages/ideas.html` |
 | A logo, screenshot, or any image asset | `assets/images/` |
