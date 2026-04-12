@@ -45,60 +45,6 @@
 			<button class="btn btn-primary" onclick="window.open('https://docs.google.com/spreadsheets/d/1WpkkEN1v4_lsCLMNSiVRJOpek_zocsK3A6ZxgTSMCvI/edit', '_blank')">
 				Open Sheet & Comment ↗
 			</button>
-		<a id="sheet-link"
-           href="https://docs.google.com/spreadsheets/d/1WpkkEN1v4_lsCLMNSiVRJOpek_zocsK3A6ZxgTSMCvI/edit"
-           target="_blank"
-           style="
-               display: inline-block;
-               margin-top: 10px;
-               padding: 12px 20px;
-               border-radius: 12px;
-               background: linear-gradient(135deg, #6c63ff, #5a54e6);
-               color: white;
-               font-weight: 600;
-               text-decoration: none;
-               box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-               transition: transform 0.15s ease;
-           "
-           onmouseover="this.style.transform='scale(1.05)'"
-           onmouseout="this.style.transform='scale(1)'">
-           Open Sheet & Comment ↗
-        </a>
-        <br>
-        <a href="https://docs.google.com/spreadsheets/d/1WpkkEN1v4_lsCLMNSiVRJOpek_zocsK3A6ZxgTSMCvI/edit"
-           id="bookmark-btn"
-           title="Bookmark this sheet"
-           style="
-               display: inline-block;
-               margin-top: 10px;
-               padding: 12px 20px;
-               border-radius: 12px;
-               background: linear-gradient(135deg, #ffb347, #ff7e5f);
-               color: white;
-               font-weight: 600;
-               text-decoration: none;
-               box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-               transition: transform 0.15s ease;
-               cursor: pointer;
-           "
-           onmouseover="this.style.transform='scale(1.05)'"
-           onmouseout="this.style.transform='scale(1)'"
-           onclick="
-               try {
-                   if (window.sidebar && window.sidebar.addPanel) {
-                       window.sidebar.addPanel(document.title, this.href, '');
-                       return false;
-                   } else if (window.external && ('AddFavorite' in window.external)) {
-                       window.external.AddFavorite(this.href, document.title);
-                       return false;
-                   }
-               } catch (e) {}
-               alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this sheet.');
-               return false;
-           ">
-           ⭐ Bookmark this by clicking here
-        </a>
-		</center>
 		<br>
         <p><strong>How to use:</strong></p>
         <ul>
