@@ -30,6 +30,10 @@
   "card.tools.desc": "Dividido em Standalone, PCVR e Geral — criado e mantido pela comunidade.",
   "card.list.title": "Lista de Compatibilidade Quest",
   "card.list.desc": "Acompanhe a compatibilidade de jogos Quest em diferentes firmwares. Reporte o que funciona e o que não funciona.",
+  "card.ideas.title": "Ideias",
+  "card.ideas.desc": "Lista de desejos, sugestões de funcionalidades e experimentos que a comunidade adoraria ver.",
+  "card.update.title": "Devo atualizar?",
+  "card.update.desc": "A resposta pode te surpreender.",
   "card.cta": "Abrir página",
 
   "about.kicker": "// Sobre",
@@ -62,5 +66,15 @@
   "page.list.check": "Verifique a versão do firmware e o status",
   "page.list.contribute_title": "Quer contribuir?",
   "page.list.contribute_desc": "Você pode adicionar novos resultados de teste deixando um comentário na planilha do Google.",
-  "page.list.contribute_review": "As submissões serão revisadas manualmente e adicionadas à lista."
+  "page.list.contribute_review": "As submissões serão revisadas manualmente e adicionadas à lista.",
+
+  "page.ideas.sub": "Lista de desejos, sugestões de funcionalidades e experimentos que a comunidade adoraria ver.",
+  "page.ideas.how": "Como contribuir ideias:",
+  "page.ideas.step1": "Abra um Issue ou PR no GitHub com sua sugestão",
+  "page.ideas.step2": "Descreva a ideia claramente e por que ela ajudaria",
+  "page.ideas.step3": "A comunidade e os mantenedores vão discutir e priorizar",
+  "page.ideas.current": "Ideias atuais e lista de desejos:",
+  "page.ideas.placeholder": "Esta página é um rascunho — abra um PR para adicionar suas ideias aqui!",
+
+  "page.update.sub": "A resposta pode te surpreender."
 }

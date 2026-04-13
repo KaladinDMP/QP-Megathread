@@ -30,6 +30,10 @@
   "card.tools.desc": "Unterteilt in Standalone, PCVR und Allgemein — erstellt und gepflegt von der Community.",
   "card.list.title": "Quest Kompatibilitätsliste",
   "card.list.desc": "Verfolge die Quest-Spielkompatibilität über verschiedene Firmware-Versionen. Melde, was funktioniert und was nicht.",
+  "card.ideas.title": "Ideen",
+  "card.ideas.desc": "Wunschliste, Funktionsvorschläge und Experimente, die die Community gerne sehen würde.",
+  "card.update.title": "Sollte ich aktualisieren?",
+  "card.update.desc": "Die Antwort könnte dich überraschen.",
   "card.cta": "Seite öffnen",
 
   "about.kicker": "// Über uns",
@@ -62,5 +66,15 @@
   "page.list.check": "Prüfe Firmware-Version und Status",
   "page.list.contribute_title": "Möchtest du beitragen?",
   "page.list.contribute_desc": "Du kannst neue Testergebnisse hinzufügen, indem du einen Kommentar in der Google-Tabelle hinterlässt.",
-  "page.list.contribute_review": "Einreichungen werden manuell überprüft und zur Liste hinzugefügt."
+  "page.list.contribute_review": "Einreichungen werden manuell überprüft und zur Liste hinzugefügt.",
+
+  "page.ideas.sub": "Wunschliste, Funktionsvorschläge und Experimente, die die Community gerne sehen würde.",
+  "page.ideas.how": "So kannst du Ideen beitragen:",
+  "page.ideas.step1": "Öffne ein GitHub Issue oder PR mit deinem Vorschlag",
+  "page.ideas.step2": "Beschreibe die Idee klar und warum sie helfen würde",
+  "page.ideas.step3": "Community und Maintainer werden diskutieren und priorisieren",
+  "page.ideas.current": "Aktuelle Ideen und Wunschliste:",
+  "page.ideas.placeholder": "Diese Seite ist ein Entwurf — öffne einen PR, um deine Ideen hier hinzuzufügen!",
+
+  "page.update.sub": "Die Antwort könnte dich überraschen."
 }
