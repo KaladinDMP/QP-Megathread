@@ -49,3 +49,36 @@ if (updatedEl) {
       })
       .catch(() => {}); // fail silently if offline or rate-limited
 }
+
+// Per-card last-updated dates + NEW badge for changes within 7 days.
+// Each card carries a data-page attribute pointing to its page file.
+const pageCards = document.querySelectorAll('.card[data-page]');
+if (pageCards.length) {
+    const sevenDays = 7 * 24 * 60 * 60 * 1000;
+    const now = Date.now();
+
+    Promise.all([...pageCards].map(card =>
+        fetch(`https://api.github.com/repos/KaladinDMP/QP-Megathread/commits?path=${card.dataset.page}&per_page=1`)
+            .then(r => r.ok ? r.json() : null)
+            .then(d => ({ card, commit: d && d[0] ? d[0] : null }))
+            .catch(() => ({ card, commit: null }))
+    )).then(results => {
+        results.forEach(({ card, commit }) => {
+            if (!commit) return;
+            const date = new Date(commit.commit.committer.date);
+            const isNew = (now - date.getTime()) < sevenDays;
+            const formatted = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+            const el = document.createElement('div');
+            el.className = 'card-updated';
+            if (isNew) {
+                el.innerHTML = `<span class="badge-new">NEW</span><span class="updated-date">Updated ${formatted}</span>`;
+            } else {
+                el.innerHTML = `<span class="updated-date">Updated ${formatted}</span>`;
+            }
+
+            const cta = card.querySelector('.card-cta');
+            if (cta) card.insertBefore(el, cta);
+        });
+    });
+}

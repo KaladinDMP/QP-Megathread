@@ -525,6 +525,35 @@ a { color: inherit; text-decoration: none; }
 .arrow { transition: transform 0.3s ease; display: inline-block; }
 .card:hover .arrow { transform: translateX(5px); }
 
+/* ---------- Card last-updated ---------- */
+.card-updated {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #7e8498;
+}
+.updated-date { opacity: 0.75; }
+.badge-new {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, rgba(0,255,204,0.15), rgba(0,204,255,0.12));
+    border: 1px solid rgba(0,255,204,0.35);
+    color: #00ffcc;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    animation: badge-glow 2s ease-in-out infinite;
+}
+@keyframes badge-glow {
+    0%, 100% { box-shadow: 0 0 6px rgba(0,255,204,0.2); }
+    50%       { box-shadow: 0 0 14px rgba(0,255,204,0.5), 0 0 24px rgba(0,255,204,0.15); }
+}
+
 /* ---------- About ---------- */
 .about-wrap { display: flex; justify-content: center; }
 .about-card {
