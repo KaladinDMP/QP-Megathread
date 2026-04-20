@@ -1,0 +1,24 @@
+.md-footer-meta {
+  background-color: var(--background-color);
+}
+
+.md-footer__inner {
+  display: none !important;
+}
+
+h1 {
+  color: var(--md-primary-fg-color) !important;
+}
+
+/* Card links */
+.md-typeset .card-link {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .card-link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .card-link:not(:first-child) {
+  padding-left: 0.5em;
+}

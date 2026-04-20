@@ -19,19 +19,19 @@
 # ------------------------------------------------------------
 
 # Lock the index and shared code/data assets to maintainers
-/index.html           @KaladinDMP @Nildyanna
-/assets/              @KaladinDMP @Nildyanna
-/CNAME                @KaladinDMP @Nildyanna
-/.github/             @KaladinDMP @Nildyanna
+/docs       @KaladinDMP @Nildyanna @Ast3risk-ops
+/docs/assets/              @KaladinDMP @Nildyanna @Ast3risk-ops
+/docs/CNAME                @KaladinDMP @Nildyanna @Ast3risk-ops
+/.github/             @KaladinDMP @Nildyanna @Ast3risk-ops
 
 # --- Community-open exceptions (must come AFTER the broad rules) ---
 
 # Anyone can add images, logos or screenshots without review.
 # Empty owner list = no review required.
-/assets/images/
+/docs/assets/images/
 
 # Subpages are intentionally open: /pages/** is not listed,
 # so no Code Owner review is required there either.
 
 # Exception: the compatibility list page is maintained by @an0n137
-/pages/list.html      @an0n137
+/docs/quest/compatibility.md      @an0n137
