@@ -1,0 +1,4 @@
+Rollback to the old HTML version.
+No idea what’s going on with this new Zensical system, but GH Pages isn’t hosting it correctly.
+The whole megathread is rendering as broken static HTML text.
+@Ast3risk-ops Please test the docs.yml before pushing to prod.
