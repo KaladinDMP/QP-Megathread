@@ -1,0 +1,5 @@
+site/
+.cache/
+.git/
+.venv/
+.python-version
