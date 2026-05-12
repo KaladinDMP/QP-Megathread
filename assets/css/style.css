@@ -625,6 +625,12 @@ a { color: inherit; text-decoration: none; }
     color: #86ffd2;
 }
 
+.badge-native {
+    background: rgba(255, 140, 0, 0.14);
+    border: 1px solid rgba(255, 140, 0, 0.4);
+    color: #ffbe73;
+}
+
 /* KEY BOX */
 .badge-key {
     margin-bottom: 20px;
